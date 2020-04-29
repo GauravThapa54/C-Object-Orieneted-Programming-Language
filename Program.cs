@@ -1,36 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace Arrays.cs
+namespace Lambda_Expression
 {
     class Program
     {
         static void Main(string[] args)
         {
-            var names = new List<string>{ "<name of friends>", "Ana", "felipe" };
-
-            names.Add("Johnny");
-            names.Add("Phil");
-            names.Add("Jenny");
-            foreach (string name in names)
-            {
-                Console.WriteLine(name);
-            }
-            Console.WriteLine(names[0]);
-
-            //The other method of Array 
-
-
-            //var names = new List<string>{ "<name>", "Ana", "felipe" };
-            //foreach (string name in names)
-            //{
-            //    Console.WriteLine($"Hello {name.ToUpper()}!");
-            //}
-            //for ( int i = 0; i < names.Count; i ++)
-            //{
-            //    Console.WriteLine($"hello {names[i].ToUpper()}!"); ;
-            //}
-
+            int[] numbers = { 2, 3, 4, 5, 6, 10 };
+            var squaredNumbers = numbers.Select(x => x * x);
+            Console.WriteLine(string.Join(" ", squaredNumbers));
         }
     }
 }
